@@ -5,7 +5,7 @@ import (
 	"github.com/joho/godotenv"
 	"log"
 	"week5/internal/core/domains"
-	"week5/internal/core/repository"
+	"week5/internal/core/repository/gorm_driver"
 	"week5/internal/core/services"
 	"week5/pkg/repository/postgres"
 )
@@ -20,12 +20,22 @@ func main() {
 		log.Println(err)
 		return
 	}
-	studentRepo, err := repository.NewStudentRepo(db)
+	studentRepo, err := gorm_driver.NewStudentRepo(db)
 	if err != nil {
 		log.Println(err)
 		return
 	}
-	studentService := services.NewStudentService(studentRepo)
+	teacherRepo, _ := gorm_driver.NewTeacherGormDBRepo(db)
+	if err != nil {
+		log.Println(err)
+		return
+	}
+	studentService := services.NewStudentService(studentRepo, teacherRepo)
+	studentService.CreateTeacher()
+	// student.Service.GetTeacher(1)
+	// student.Service.CreateTeacher("ahmet", "matematik")
+	// student.Service.DeleteTeacher(1)
+	// student.Service.DeleteStudent(1)
 	student1 := domains.NewStudent("ali")
 	student2 := domains.NewStudent("veli")
 	student3 := domains.NewStudent("cengiz")

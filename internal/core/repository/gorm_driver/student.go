@@ -19,7 +19,7 @@ func NewStudentRepo(db *gorm.DB) (*StudentGormRepo, error) {
 }
 
 func (s *StudentGormRepo) Save(student *domains.Student) error {
-	return s.db.Save(student).Error
+	return s.db.Create(student).Error
 }
 
 func (s *StudentGormRepo) GetByID(ID uint) (*domains.Student, error) {
