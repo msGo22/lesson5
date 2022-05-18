@@ -3,8 +3,8 @@ package services
 import (
 	"errors"
 	"fmt"
-	"week5/internal/core/domains"
-	"week5/internal/core/repository"
+	"github.com/msGo22/lesson5/internal/core/domains"
+	"github.com/msGo22/lesson5/internal/core/repository"
 )
 
 type StudentService struct {

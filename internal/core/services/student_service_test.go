@@ -2,12 +2,12 @@ package services_test
 
 import (
 	"errors"
+	"github.com/msGo22/lesson5/internal/core/domains"
+	"github.com/msGo22/lesson5/internal/core/services"
+	"github.com/msGo22/lesson5/pkg/mocks"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 	"testing"
-	"week5/internal/core/domains"
-	"week5/internal/core/services"
-	"week5/pkg/mocks"
 )
 
 func TestNewStudentService(t *testing.T) {

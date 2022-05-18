@@ -1,4 +1,4 @@
-module week5
+module github.com/msGo22/lesson5
 
 go 1.18
 

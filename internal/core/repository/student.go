@@ -1,6 +1,6 @@
 package repository
 
-import "week5/internal/core/domains"
+import "github.com/msGo22/lesson5/internal/core/domains"
 
 type StudentRepo interface {
 	Save(student *domains.Student) error

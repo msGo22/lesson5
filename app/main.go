@@ -3,11 +3,11 @@ package main
 import (
 	"fmt"
 	"github.com/joho/godotenv"
+	"github.com/msGo22/lesson5/internal/core/domains"
+	"github.com/msGo22/lesson5/internal/core/repository/gorm_driver"
+	"github.com/msGo22/lesson5/internal/core/services"
+	"github.com/msGo22/lesson5/pkg/repository/postgres"
 	"log"
-	"week5/internal/core/domains"
-	"week5/internal/core/repository/gorm_driver"
-	"week5/internal/core/services"
-	"week5/pkg/repository/postgres"
 )
 
 func init() {
