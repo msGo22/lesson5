@@ -2,8 +2,8 @@ package gorm_driver
 
 import (
 	"fmt"
+	"github.com/msGo22/lesson5/internal/core/domains"
 	"gorm.io/gorm"
-	"week5/internal/core/domains"
 )
 
 type TeacherGormDBRepo struct {

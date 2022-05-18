@@ -1,8 +1,8 @@
 package gorm_driver
 
 import (
+	"github.com/msGo22/lesson5/internal/core/domains"
 	"gorm.io/gorm"
-	"week5/internal/core/domains"
 )
 
 type StudentGormRepo struct {

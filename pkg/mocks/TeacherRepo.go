@@ -3,7 +3,7 @@
 package mocks
 
 import (
-	domains "week5/internal/core/domains"
+	domains "github.com/msGo22/lesson5/internal/core/domains"
 
 	mock "github.com/stretchr/testify/mock"
 
